@@ -94,7 +94,7 @@ class Search extends React.Component {
                           {collectionName}
                         </Link>
                         {collectionPrice}
-                        {artworkUrl100}
+                        <img src={ artworkUrl100 } alt="" />
                         {releaseDate}
                         {trackCount}
                       </li>
