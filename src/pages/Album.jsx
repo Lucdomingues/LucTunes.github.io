@@ -55,7 +55,7 @@ class Album extends React.Component {
               objMusic={ element }
               trackId={ element.trackId }
               previewUrl={ element.previewUrl }
-              trackName={element.trackName}
+              trackName={ element.trackName }
               checkedSongs={ favoriteSongs }
             />
           ))}
@@ -75,62 +75,3 @@ Album.propTypes = {
 };
 
 export default Album;
-
-// import React, { Component } from "react";
-// import PropTypes from "prop-types";
-// import Header from "../components/Header";
-// import getMusics from "../services/musicsAPI";
-// import MusicCard from "../components/MusicCard";
-
-// export default class Album extends Component {
-//   state = {
-//     album: {},
-//     musics: [],
-//   };
-
-//   componentDidMount() {
-//     this.getAlbum();
-//   }
-
-//   getAlbum = async () => {
-//     const {
-//       match: {
-//         params: { id },
-//       },
-//     } = this.props;
-//     const result = await getMusics(id);
-//     this.setState({ album: result[0], musics: result.slice(1) });
-//   };
-
-//   render() {
-//     const { album, musics } = this.state;
-//     return (
-//       <>
-//         <Header />
-//         <div data-testid="page-album">
-//           <h1 data-testid="artist-name">Artista {album.artistName}</h1>
-//           <h2 data-testid="album-name">
-//             {`${album.collectionName} ${album.artistName}`}
-//           </h2>
-//           {musics.map((elem) => (
-//             <MusicCard
-//               key={elem.trackName}
-//               trackName={elem.trackName}
-//               previewUrl={elem.previewUrl}
-//               trackId={elem.trackId}
-//               music={elem}
-//             />
-//           ))}
-//         </div>
-//       </>
-//     );
-//   }
-// }
-
-// Album.propTypes = {
-//   match: PropTypes.shape({
-//     params: PropTypes.shape({
-//       id: PropTypes.string,
-//     }),
-//   }).isRequired,
-// };
