@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import getMusics from '../services/musicsAPI';
+import { getFavoriteSongs } from '../services/favoriteSongsAPI';
 
 import Header from '../components/Header';
 import MusicCard from '../components/MusicCard';
+import Loading from '../components/Loading';
 
 class Album extends React.Component {
   state = {
@@ -11,10 +13,16 @@ class Album extends React.Component {
     collection: '',
     image: '',
     arr: [],
+    loading: false,
+    favoriteSongs: [],
   };
 
-  componentDidMount() {
+  async componentDidMount() {
     this.getRequiMusic();
+    const save = await getFavoriteSongs();
+    this.setState({
+      favoriteSongs: save,
+    });
   }
 
   getRequiMusic = async () => {
@@ -29,7 +37,9 @@ class Album extends React.Component {
   };
 
   render() {
-    const { artist, collection, image, arr } = this.state;
+    const {
+      artist,
+      collection, image, arr, loading, favoriteSongs } = this.state;
     return (
       <section data-testid="page-album">
         <Header />
@@ -39,7 +49,17 @@ class Album extends React.Component {
             <h3 data-testid="album-name">{`${collection} - ${artist}`}</h3>
             <img src={ image } alt={ artist } />
           </div>
-          <MusicCard arr={ arr } />
+          {arr.slice([1]).map((element) => (
+            <MusicCard
+              key={ element.trackId }
+              objMusic={ element }
+              trackId={ element.trackId }
+              previewUrl={ element.previewUrl }
+              trackName={element.trackName}
+              checkedSongs={ favoriteSongs }
+            />
+          ))}
+          {loading && <Loading />}
         </section>
       </section>
     );
@@ -55,3 +75,62 @@ Album.propTypes = {
 };
 
 export default Album;
+
+// import React, { Component } from "react";
+// import PropTypes from "prop-types";
+// import Header from "../components/Header";
+// import getMusics from "../services/musicsAPI";
+// import MusicCard from "../components/MusicCard";
+
+// export default class Album extends Component {
+//   state = {
+//     album: {},
+//     musics: [],
+//   };
+
+//   componentDidMount() {
+//     this.getAlbum();
+//   }
+
+//   getAlbum = async () => {
+//     const {
+//       match: {
+//         params: { id },
+//       },
+//     } = this.props;
+//     const result = await getMusics(id);
+//     this.setState({ album: result[0], musics: result.slice(1) });
+//   };
+
+//   render() {
+//     const { album, musics } = this.state;
+//     return (
+//       <>
+//         <Header />
+//         <div data-testid="page-album">
+//           <h1 data-testid="artist-name">Artista {album.artistName}</h1>
+//           <h2 data-testid="album-name">
+//             {`${album.collectionName} ${album.artistName}`}
+//           </h2>
+//           {musics.map((elem) => (
+//             <MusicCard
+//               key={elem.trackName}
+//               trackName={elem.trackName}
+//               previewUrl={elem.previewUrl}
+//               trackId={elem.trackId}
+//               music={elem}
+//             />
+//           ))}
+//         </div>
+//       </>
+//     );
+//   }
+// }
+
+// Album.propTypes = {
+//   match: PropTypes.shape({
+//     params: PropTypes.shape({
+//       id: PropTypes.string,
+//     }),
+//   }).isRequired,
+// };
