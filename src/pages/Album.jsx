@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import getMusics from '../services/musicsAPI';
-import { getFavoriteSongs } from '../services/favoriteSongsAPI';
 
 import Header from '../components/Header';
 import MusicCard from '../components/MusicCard';
@@ -14,15 +13,10 @@ class Album extends React.Component {
     image: '',
     arr: [],
     loading: false,
-    favoriteSongs: [],
   };
 
   async componentDidMount() {
     this.getRequiMusic();
-    const save = await getFavoriteSongs();
-    this.setState({
-      favoriteSongs: save,
-    });
   }
 
   getRequiMusic = async () => {
@@ -39,7 +33,7 @@ class Album extends React.Component {
   render() {
     const {
       artist,
-      collection, image, arr, loading, favoriteSongs } = this.state;
+      collection, image, arr, loading } = this.state;
     return (
       <section data-testid="page-album">
         <Header />
@@ -56,7 +50,6 @@ class Album extends React.Component {
               trackId={ element.trackId }
               previewUrl={ element.previewUrl }
               trackName={ element.trackName }
-              checkedSongs={ favoriteSongs }
             />
           ))}
           {loading && <Loading />}

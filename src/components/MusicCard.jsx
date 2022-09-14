@@ -1,30 +1,47 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { addSong, removeSong } from '../services/favoriteSongsAPI';
+import { addSong, removeSong, getFavoriteSongs } from '../services/favoriteSongsAPI';
 import Loading from './Loading';
 
 class MusicCard extends React.Component {
   state = {
     loading: false,
+    favoriteSongs: [],
   };
 
-  HandleFavorites = async ({ target }) => {
-    const { objMusic } = this.props;
+  async componentDidMount() {
+    const save = await getFavoriteSongs();
+    this.setState({
+      favoriteSongs: save,
+    });
+  }
 
+  HandleFavorites = ({ target }) => {
+    const { objMusic } = this.props;
     if (target.checked === true) {
-      this.setState({ loading: true });
-      await addSong(objMusic);
-      this.setState({ loading: false });
+      this.setState({ loading: true }, async () => {
+        await addSong(objMusic);
+        const save = await getFavoriteSongs();
+        this.setState({
+          loading: false,
+          favoriteSongs: save,
+        });
+      });
     } else {
-      this.setState({ loading: true });
-      await removeSong(objMusic);
-      this.setState({ loading: false });
+      this.setState({ loading: true }, async () => {
+        await removeSong(objMusic);
+        const save = await getFavoriteSongs();
+        this.setState({
+          loading: false,
+          favoriteSongs: save,
+        });
+      });
     }
   };
 
   render() {
-    const { loading } = this.state;
-    const { trackName, previewUrl, trackId, checkedSongs } = this.props;
+    const { loading, favoriteSongs } = this.state;
+    const { trackName, previewUrl, trackId } = this.props;
     const elementoHtml = (
       <section>
         <ul>
@@ -41,7 +58,8 @@ class MusicCard extends React.Component {
               <input
                 type="checkbox"
                 onChange={ this.HandleFavorites }
-                checked={ checkedSongs.some((elment) => elment.trackName === trackName) }
+                checked={ favoriteSongs
+                  .some((element) => element.trackId === trackId) }
                 name="musicFavo"
                 id={ trackId }
                 data-testid={ `checkbox-music-${trackId}` }
@@ -49,20 +67,15 @@ class MusicCard extends React.Component {
             </label>
           </li>
         </ul>
-      </section>
-    );
-
+      </section>);
     return loading ? <Loading /> : elementoHtml;
   }
 }
 
 MusicCard.propTypes = {
-  checkedSongs: PropTypes.shape({
-    some: PropTypes.func,
-  }).isRequired,
-  objMusic: PropTypes.objectOf(PropTypes.number).isRequired,
+  objMusic: PropTypes.objectOf(PropTypes.string, PropTypes.number).isRequired,
   previewUrl: PropTypes.string.isRequired,
-  trackId: PropTypes.string.isRequired,
+  trackId: PropTypes.number.isRequired,
   trackName: PropTypes.string.isRequired,
 };
 
