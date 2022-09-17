@@ -6,22 +6,20 @@ import Loading from './Loading';
 
 class Header extends React.Component {
   state = {
-    user: [],
+    user: {},
     loading: false,
   };
 
-  componentDidMount() {
-    this.pegueUser();
+  async componentDidMount() {
+    await this.pegueUser();
   }
 
   pegueUser = async () => {
     this.startLoading();
-    await getUser().then((resp) => {
-      const response = resp.name;
-      this.setState({
-        user: response,
-        loading: false,
-      });
+    const user = await getUser();
+    this.setState({
+      user,
+      loading: false,
     });
   };
 
@@ -46,7 +44,7 @@ class Header extends React.Component {
         </nav>
         <p data-testid="header-user-name">
           Usuário:
-          {user}
+          {user.name}
         </p>
         <section>{loading && <Loading />}</section>
       </header>

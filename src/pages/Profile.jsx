@@ -3,47 +3,41 @@ import { Link } from 'react-router-dom';
 import { getUser } from '../services/userAPI';
 
 import Header from '../components/Header';
-import Loading from '../components/Loading';
 
 class Profile extends React.Component {
   state = {
     usuario: {},
-    // loading: false,
   };
 
   async componentDidMount() {
-    // this.goLoading();
     const usuario = await getUser();
     this.setState({
       usuario,
-      // loading: false,
     });
   }
 
-  // goLoading = () => {
-  //   const { loading } = this.state;
-  //   this.setState({
-  //     loading: !loading,
-  //   });
-  // };
-
   render() {
-    const { usuario: { image, name, email, description } } = this.state;
+    const { usuario } = this.state;
     return (
       <div data-testid="page-profile">
         <Header />
-        {!name ? <Loading /> : (
+        {usuario.name && (
           <section>
             <article>
               <Link to="/profile/edit">Editar perfil</Link>
-              <img src={ image } alt={ name } data-testid="profile-image" />
+              <img
+                src={ usuario.image }
+                alt={ usuario.name }
+                data-testid="profile-image"
+              />
             </article>
             <h2>Nome</h2>
-            <p>{name}</p>
+            <p>{usuario.name}</p>
+            <p>{ usuario.name }</p>
             <h2>Email</h2>
-            <p>{email}</p>
+            <p>{usuario.email}</p>
             <h2>Descrição</h2>
-            <p>{ description }</p>
+            <p>{ usuario.description }</p>
           </section>
         )}
       </div>
