@@ -22,22 +22,34 @@ class Profile extends React.Component {
       <div data-testid="page-profile">
         <Header />
         {usuario.name && (
-          <section>
-            <article>
-              <Link to="/profile/edit">Editar perfil</Link>
-              <img
-                src={ usuario.image }
-                alt={ usuario.name }
-                data-testid="profile-image"
-              />
-            </article>
-            <h2>Nome</h2>
-            <p>{usuario.name}</p>
-            <p>{ usuario.name }</p>
-            <h2>Email</h2>
-            <p>{usuario.email}</p>
-            <h2>Descrição</h2>
-            <p>{ usuario.description }</p>
+          <section className="container-profile">
+            <div className="profile">
+              <article>
+                <img
+                  src={ usuario.image }
+                  alt={ usuario.name }
+                  data-testid="profile-image"
+                />
+              </article>
+              <p>
+                <strong>Nome:</strong>
+                {usuario.name}
+              </p>
+              <p>
+                <strong>Email:</strong>
+                {usuario.email}
+              </p>
+              <p>
+                <strong>Descrição:</strong>
+                {usuario.description}
+              </p>
+              <Link
+                to="/profile/edit"
+                className="btn btn-secondary btn-lg"
+              >
+                Editar perfil
+              </Link>
+            </div>
           </section>
         )}
       </div>

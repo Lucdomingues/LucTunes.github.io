@@ -42,38 +42,50 @@ class MusicCard extends React.Component {
   render() {
     const { loading, favoriteSongs } = this.state;
     const { trackName, previewUrl, trackId } = this.props;
-    const elementoHtml = (
+    return (
       <section>
-        <ul>
-          <li key={ trackName }>
-            {loading && <Loading />}
-            <p>{trackName}</p>
-            <audio data-testid="audio-component" src={ previewUrl } controls>
-              <track kind="captions" />
-              O seu navegador não suporta elemento
-              <code>audio</code>
-            </audio>
-            <label htmlFor={ trackId }>
-              Favorita
-              <input
-                type="checkbox"
-                onChange={ this.HandleFavorites }
-                checked={ favoriteSongs
-                  .some((element) => element.trackId === trackId) }
-                name="musicFavo"
-                id={ trackId }
-                data-testid={ `checkbox-music-${trackId}` }
-              />
-            </label>
-          </li>
-        </ul>
-      </section>);
-    return loading ? <Loading /> : elementoHtml;
+        {loading ? <Loading /> : (
+          <ul className="container-f">
+            <li key={ trackName }>
+              <h3 className="albums">{trackName}</h3>
+              <audio
+                className="btn btn-dark position-relative"
+                data-testid="audio-component"
+                src={ previewUrl }
+                controls
+              >
+                <track kind="captions" />
+                O seu navegador não suporta elemento
+                <code>audio</code>
+              </audio>
+              <div className="form-check form-switch">
+                <label
+                  htmlFor="flexSwitchCheckDefault"
+                  className="favorite form-check-label "
+                >
+                  Favorita
+                  <input
+                    type="checkbox"
+                    onChange={ this.HandleFavorites }
+                    checked={ favoriteSongs
+                      .some((element) => element.trackId === trackId) }
+                    name="musicFavo"
+                    data-testid={ `checkbox-music-${trackId}` }
+                    className="form-check-input"
+                    id="flexSwitchCheckDefault"
+                  />
+                </label>
+              </div>
+            </li>
+          </ul>
+        )}
+      </section>
+    );
   }
 }
 
 MusicCard.propTypes = {
-  objMusic: PropTypes.objectOf(PropTypes.string, PropTypes.number).isRequired,
+  objMusic: PropTypes.objectOf(PropTypes.string).isRequired,
   previewUrl: PropTypes.string.isRequired,
   trackId: PropTypes.number.isRequired,
   trackName: PropTypes.string.isRequired,

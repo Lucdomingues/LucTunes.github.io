@@ -37,23 +37,26 @@ class Album extends React.Component {
     return (
       <section data-testid="page-album">
         <Header />
-        <section>
-          <div>
-            <h2 data-testid="artist-name">{artist}</h2>
-            <h3 data-testid="album-name">{`${collection} - ${artist}`}</h3>
-            <img src={ image } alt={ artist } />
-          </div>
-          {arr.slice([1]).map((element) => (
-            <MusicCard
-              key={ element.trackId }
-              objMusic={ element }
-              trackId={ element.trackId }
-              previewUrl={ element.previewUrl }
-              trackName={ element.trackName }
-            />
-          ))}
-          {loading && <Loading />}
-        </section>
+        {loading ? <Loading /> : (
+          <section className="search container-f">
+            <div className="container autor ">
+              <h1 data-testid="artist-name" className="f">{artist}</h1>
+              <h2 data-testid="album-name">{`${collection} - ${artist}`}</h2>
+              <img src={ image } alt={ artist } />
+            </div>
+            <div className="container container-b">
+              {arr.slice([1]).map((element) => (
+                <MusicCard
+                  key={ element.trackId }
+                  objMusic={ element }
+                  trackId={ element.trackId }
+                  previewUrl={ element.previewUrl }
+                  trackName={ element.trackName }
+                />
+              ))}
+            </div>
+          </section>
+        )}
       </section>
     );
   }
