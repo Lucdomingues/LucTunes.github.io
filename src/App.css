@@ -1,9 +1,9 @@
 * {
+  background: #212529;
   box-sizing: border-box;
+  color: white;
   margin: 0;
   padding: 0;
-  background: #212529;
-  color: white;
 }
 
 .img-loading {
@@ -15,40 +15,40 @@ span {
 }
 
 .container-login {
-width: 100vw;
-height: 100vh;
-background: #6C7A89;
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
+  align-items: center;
+  background: rgb(108, 122, 137);
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
 }
 
 .container-edit {
-   width: 100vw;
-height: 100vh;
-background: #212529;
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
+  align-items: center;
+  background: #212529;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
 }
 
 .formEdit {
+  background: white;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   display: flex;
-  text-align: center;
-  justify-content: space-around;
   flex-direction: column;
-  width: 500px;
   height: 600px;
-  background: #fff;
- box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2)
+  justify-content: space-around;
+  text-align: center;
+  width: 500px;
 }
 
 .formEdit label {
-  background: #fff;
-  color: #212529;
   align-self: center;
+  background: white;
+  color: #212529;
 }
 
 .formEdit input {
@@ -56,68 +56,74 @@ align-items: center;
 }
 
 .formEdit textarea {
-  width: 300px;
   height: 80px;
+  width: 300px;
 }
 
 .formEdit button {
-  width: 200px;
   align-self: center;
+  width: 200px;
 }
 
 .container-profile {
+  align-items: center;
+  background: #212529;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  justify-content: center;
   width: 100vw;
-height: 100vh;
-background: #212529;
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
 }
 
 .profile {
-   display: flex;
-  text-align: center;
-  justify-content: space-around;
+  background: white;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  display: flex;
   flex-direction: column;
-  width: 500px;
   height: 600px;
-  background: #fff;
- box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2)
+  justify-content: space-around;
+  text-align: center;
+  width: 500px;
 }
 
 .profile h2 {
-  background: #fff;
+  background: white;
   color: #212529;
 }
 
 .profile p {
-  background: #fff;
+  background: white;
   color: #212529;
 }
 
 .profile article {
-  background: #fff;
+  background: white;
 }
 
 .profile img {
-  margin-top: 30px;
-  color: #212529;
-  background: #fff;
+  background: white;
   border-radius: 50%;
-  width: 250px;
+  color: #212529;
   height: 250px;
+  margin-top: 30px;
+  width: 250px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
 .profile a {
-  background: #fff;
+  align-self: center;
+  background: white;
   color: #212529;
   width: 200px;
-  align-self: center;
 }
 
 .profile strong {
-  background: #fff;
+  background: white;
   color: #212529;
   margin-right: 10px;
 }
@@ -127,19 +133,19 @@ align-items: center;
 }
 
 .container-form {
+  background: white;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   display: flex;
-  text-align: center;
-  justify-content: space-between;
   flex-direction: column;
-  width: 500px;
   height: 600px;
-  background: #fff;
- box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2)
+  justify-content: space-between;
+  text-align: center;
+  width: 500px;
 
 }
 
 .container-form h1 {
-  background: #fff;
+  background: white;
   color: #212529;
 }
 
@@ -165,14 +171,14 @@ align-items: center;
 }
 
 .autor img {
-  width: 500px;
   height: 500px;
+  width: 500px;
 }
 
 .container-album {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .conteiner-cards {
@@ -201,20 +207,14 @@ li {
 
 .input-user {
   align-self: center;
-  width: 350px;
   height: 60px;
+  width: 350px;
 }
 
 .button {
   align-self: center;
-  width: 200px;
   height: 60px;
-}
-
-a {
-  color: white;
-  text-decoration: none;
-  transition: 0.3s;
+  width: 200px;
 }
 
 a:hover {
@@ -231,14 +231,13 @@ nav {
   align-items: center;
   background: #23232e;
   display: flex;
-  font-family: system-ui , -apple-system , BlinkMacSystemFont , 'Segoe UI' , Roboto , Oxygen , Ubuntu , Cantarell , 'Open Sans' , 'Helvetica Neue' , sans-serif;
   height: 8vh;
   justify-content: space-around;
 }
 
 .nav-list {
-  list-style: none;
   display: flex;
+  list-style: none;
 }
 
 .nav-list li {
@@ -248,6 +247,6 @@ nav {
 
 .favorites {
   display: flex;
-  margin-top: 250px;
   justify-content: center;
+  margin-top: 250px;
 }
