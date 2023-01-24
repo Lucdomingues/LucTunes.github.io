@@ -56,8 +56,6 @@
         <li><a href="#instalação">Instalação</a></li>
       </ul>
     </li>
-    <li><a href="#uso">Uso</a></li>
-    <li><a href="#roteiro">Roteiro</a></li>
     <li><a href="#contribuindo">Contribuindo</a></li>
     <li><a href="#contato">Contato</a></li>
   </ol>
@@ -90,10 +88,7 @@ Neste projeto você irá ver o LucTunes, uma aplicação capaz de reproduzir mú
 * <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="java-script" width="50" height="50"/>
 * <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" alt="css" width="50" height="50"/>
 * <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" alt="html" width="50" height="50"/>
-* <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" alt="html" width="50" height="50"/>
-* [![React][React.js]][React-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-
+* <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="50" height="50"/>
 <p align="right">(<a href="#readme-top">de volta para o topo</a>)</p>
 
 
@@ -146,17 +141,6 @@ Para fazer um **COPY** desse projeto em sua máquina localmente, siga às etapas
     ```
 <p align="right">(<a href="#readme-top">de volta para o topo</a>)</p>
 
-
-
-<!-- USO -->
-## Uso
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">de volta para o topo</a>)</p>
-
 <!-- CONTRIBUINDO -->
 ## Contribuindo
 
@@ -176,9 +160,9 @@ Não se esqueça de dar uma estrela ao projeto! Obrigado novamente!
 <!-- CONTATO -->
 ## Contato
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+EMAIL - lojalucc@outlook.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+LINKEDIN - [https://www.linkedin.com/in/lucas-domingues-developer/](https://www.linkedin.com/in/lucas-domingues-developer/)
 
 <p align="right">(<a href="#readme-top">de volta para o topo</a>)</p>
 
@@ -189,7 +173,3 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/lucas-domingues-developer/
 [product-screenshot]: images/screenshot.png
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
