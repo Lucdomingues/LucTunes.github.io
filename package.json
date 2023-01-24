@@ -1,11 +1,11 @@
 {
   "name": "trybetunes",
   "version": "1.0.0",
-  "private": false,
+  "private": true,
   "engines": {
     "node": "16"
   },
-  "homepage": "https://username.github.io/",
+  "homepage": "https://lucdomingues.github.io/LucTunes.github.io/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
