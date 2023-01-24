@@ -17,7 +17,7 @@ class App extends React.Component {
         {/* <p>TrybeTunes</p> */}
         <BrowserRouter>
           <Switch>
-            <Route exact path="/LucTunes.github.io/" component={ Login } />
+            <Route exact path="/" component={ Login } />
             <Route exact path="/search" component={ Search } />
             <Route exact path="/album/:id" component={ Album } />
             <Route exact path="/favorites" component={ Favorites } />
