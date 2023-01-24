@@ -53,7 +53,6 @@
     <li>
       <a href="#começando">Começando</a>
       <ul>
-        <li><a href="#pré-requisitos">Pré-Requisitos</a></li>
         <li><a href="#instalação">Instalação</a></li>
       </ul>
     </li>
@@ -68,8 +67,6 @@
 
 <!-- SOBRE O PROJETO -->
 ## Sobre o projeto
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 Neste projeto você irá ver o LucTunes, uma aplicação capaz de reproduzir músicas das mais variadas bandas e artistas, criar uma lista de músicas favoritas e editar o perfil da pessoa usuária logada. Essa aplicação é capaz de:
 
@@ -89,15 +86,13 @@ Neste projeto você irá ver o LucTunes, uma aplicação capaz de reproduzir mú
 
 
 ### Construído com
-
-* [![Next][Next.js]][Next-url]
+* <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" alt="react" width="50" height="50"/>
+* <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="java-script" width="50" height="50"/>
+* <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" alt="css" width="50" height="50"/>
+* <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" alt="html" width="50" height="50"/>
+* <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" alt="html" width="50" height="50"/>
 * [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
 
 <p align="right">(<a href="#readme-top">de volta para o topo</a>)</p>
 
@@ -108,21 +103,13 @@ Neste projeto você irá ver o LucTunes, uma aplicação capaz de reproduzir mú
 
 Para fazer um **COPY** desse projeto em sua máquina localmente, siga às etapas abaixo.
 
-### Pré-Requisitos
-
-Exemplo de como listar as coisas que você precisa para usar o software e como instalá-las.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
 ### Instalação
 
 1. Clone o repositório
 
   - Use o comando: 
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone git@github.com:Lucdomingues/LucTunes.git
    ```
   2. Instale as dependências
    ```sh
@@ -130,44 +117,33 @@ Exemplo de como listar as coisas que você precisa para usar o software e como i
    ```
   3. Crie uma branch a partir da branch `master`
   - Verifique que você está na branch `master`
-    
+    ```sh
+    git branch
+    ```
   - Se não estiver, mude para a branch `master`
-    - Exemplo: `git checkout master`
+    ```sh
+    git checkout master
+    ```
   - Agora crie uma branch à qual você vai submeter os `commits` do seu projeto
-    - Você deve criar uma branch no seguinte formato: `nome-de-usuario-nome-do-projeto`
-    - Exemplo: `git checkout -b joaozinho-sd-025-a-project-trybetunes`
-
+    ```sh
+    git checkout -b nome-da-branch
+    ```
   4. Adicione as mudanças ao _stage_ do Git e faça um `commit`
 
   - Verifique que as mudanças ainda não estão no _stage_
-    - Exemplo: `git status` (deve aparecer listada a pasta _joaozinho_ em vermelho)
+    ```sh
+    git status
+    ```
   - Adicione o novo arquivo ao _stage_ do Git
-    - Exemplo:
-      - `git add .` (adicionando todas as mudanças - _que estavam em vermelho_ - ao stage do Git)
-      - `git status` (deve aparecer listado o arquivo _joaozinho/README.md_ em verde)
+    ```sh
+    git add .
+    git status
+    ```
   - Faça o `commit` inicial
-    - Exemplo:
-      - `git commit -m 'iniciando o projeto x'` (fazendo o primeiro commit)
-      - `git status` (deve aparecer uma mensagem tipo _nothing to commit_ )
-
-1. Use o comando: ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
+    ```sh
+    git commit -m '[feat]new-feature'
+    git status
+    ```
 <p align="right">(<a href="#readme-top">de volta para o topo</a>)</p>
 
 
@@ -213,19 +189,7 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/lucas-domingues-developer/
 [product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
