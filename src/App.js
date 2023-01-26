@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Route, Switch, BrowserRouter } from 'react-router-dom';
+import { Route, Switch, HashRouter } from 'react-router-dom';
 
 import Album from './pages/Album';
 import Favorites from './pages/Favorites';
@@ -15,7 +15,7 @@ class App extends React.Component {
     return (
       <main>
         {/* <p>TrybeTunes</p> */}
-        <BrowserRouter>
+        <HashRouter>
           <Switch>
             <Route exact path="/" component={ Login } />
             <Route exact path="/search" component={ Search } />
@@ -25,7 +25,7 @@ class App extends React.Component {
             <Route exact path="/profile/edit" component={ ProfileEdit } />
             <Route component={ NotFound } />
           </Switch>
-        </BrowserRouter>
+        </HashRouter>
       </main>
     );
   }
