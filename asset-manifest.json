@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/LucTunes.github.io/static/css/main.8bb607ff.css",
-    "main.js": "/LucTunes.github.io/static/js/main.c445b380.js",
+    "main.js": "/LucTunes.github.io/static/js/main.ded279a9.js",
     "index.html": "/LucTunes.github.io/index.html",
     "main.8bb607ff.css.map": "/LucTunes.github.io/static/css/main.8bb607ff.css.map",
-    "main.c445b380.js.map": "/LucTunes.github.io/static/js/main.c445b380.js.map"
+    "main.ded279a9.js.map": "/LucTunes.github.io/static/js/main.ded279a9.js.map"
   },
   "entrypoints": [
     "static/css/main.8bb607ff.css",
-    "static/js/main.c445b380.js"
+    "static/js/main.ded279a9.js"
   ]
 }
