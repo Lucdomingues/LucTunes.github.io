@@ -69,7 +69,7 @@ class MusicCard extends React.Component {
                     onChange={ this.HandleFavorites }
                     checked={ favoriteSongs
                       .some((element) => element.trackId === trackId) }
-                    name="musicFavo"
+                    name="musicFavs"
                     data-testid={ `checkbox-music-${trackId}` }
                     className="form-check-input"
                     id="flexSwitchCheckDefault"
