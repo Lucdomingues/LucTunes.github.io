@@ -66,7 +66,7 @@
 <!-- SOBRE O PROJETO -->
 ## Sobre o projeto
 
-Neste projeto você irá ver o LucTunes, uma aplicação capaz de reproduzir músicas das mais variadas bandas e artistas, criar uma lista de músicas favoritas e editar o perfil da pessoa usuária logada. Uma aplicação baseada no front-end escrita com JavaScript, utilizando a biblioteca React, construída por componentes e testes. Sobre o CSS, utilizei a ferramenta Bootstrap para me auxiliar na contrução do estilo. Essa aplicação é capaz de:
+Neste projeto você irá ver o LucTunes, uma aplicação capaz de reproduzir músicas das mais variadas bandas e artistas, criar uma lista de músicas favoritas e editar o perfil da pessoa usuária logada. Uma aplicação baseada no front-end escrita com JavaScript, utilizando a biblioteca React, construída por componentes e testes. Sobre o CSS, utilizei a ferramenta Bootstrap para me auxiliar na construção do estilo. Essa aplicação é capaz de:
 
 - [x] Fazer login
 - [x] Pesquisar por uma banda ou artista
