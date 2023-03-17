@@ -104,7 +104,7 @@ Para fazer um **COPY** desse projeto em sua máquina localmente, siga às etapas
 
   - Use o comando: 
    ```sh
-   git clone git@github.com:Lucdomingues/LucTunes.git
+   git clone git@github.com:Lucdomingues/LucTunes.github.io.git
    ```
   2. Instale as dependências
    ```sh
